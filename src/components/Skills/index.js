@@ -57,33 +57,7 @@ const SkillsContainer = styled.div`
   
 `
 
-const Skill = styled.div`
-  width: 100%;
-  max-width: 500px;
-  background:#262526;
-  border: 0.1px solid white;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  border-radius: 16px;
-  padding: 18px 36px;
-  @media (max-width: 768px) {
-    max-width: 400px;
-    padding: 10px 36px;
-  }
-  @media (max-width: 500px) {
-    max-width: 330px;
-    padding: 10px 36px;
-  }
-  transition: all 0.3s ease-in-out;
-  perspective: 1000px; 
 
-
-  &:hover{
-      box-shadow: 0px 0px 20px white;
-      transform: translateY(-8px)  rotateY(12deg);
-  }
-
-
-`
 
 const SkillTitle = styled.h2`
   font-size: 28px;
@@ -130,6 +104,43 @@ const SkillItem = styled.div`
 const SkillImage = styled.img`
   width: 24px;
   height: 24px;
+`
+const Skill = styled.div`
+  width: 100%;
+  max-width: 500px;
+  //background:#08989c;
+  background:#262526;
+  border: 0.1px solid white;
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border-radius: 16px;
+  padding: 18px 36px;
+  @media (max-width: 768px) {
+    max-width: 400px;
+    padding: 10px 36px;
+  }
+  @media (max-width: 500px) {
+    max-width: 330px;
+    padding: 10px 36px;
+  }
+  transition: all 0.3s ease-in-out;
+  perspective: 1000px; 
+  &:hover ${SkillTitle},&:hover ${SkillItem}{
+    color:black;
+
+  }
+  &:hover ${SkillItem}{
+    border: 1px solid black;
+
+  }
+
+  &:hover{
+      box-shadow: 0px 0px 20px white;
+      transform: translateY(-8px)  rotateY(12deg);
+      
+      background : #08989c;
+  }
+
+
 `
 
 

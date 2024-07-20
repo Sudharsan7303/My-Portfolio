@@ -15,29 +15,7 @@ const Button = styled.button`
     cursor: pointer;
     transition: all 0.8s ease-in-out;
 `
-const Card = styled.div`
-    border: 0.1px solid white;
-    
-    width: 330px;
-    height: 490px;
-    background-color:#262526 ;
-    
-    border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
-    overflow: hidden;
-    padding: 26px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    transition: all 0.3s ease-in-out;
-    perspective: 1000px; 
 
-
-    &:hover{
-        box-shadow: 0px 0px 20px white;
-        transform: translateY(-8px)  rotateY(12deg);
-    }
-`
 
 const Image = styled.img`
     width: 100%;
@@ -59,8 +37,8 @@ const Tags = styled.div`
 const Tag = styled.span`
     font-size: 12px;
     font-weight: 400;
-    color: ${({ theme }) => theme.primary};
-    background-color: ${({ theme }) => theme.primary + 15};
+    color: black;
+    background-color: white;
     padding: 2px 8px;
     border-radius: 10px;
 `
@@ -99,7 +77,38 @@ const Description = styled.div`
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 `
+const Card = styled.div`
+    border: 0.1px solid white;
+    
+    width: 330px;
+    height: 490px;
+    background-color:#262526 ;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
+    overflow: hidden;
+    padding: 26px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: all 0.3s ease-in-out;
+    perspective: 1000px; 
 
+
+    &:hover{
+        box-shadow: 0px 0px 20px white;
+        transform: translateY(-8px)  rotateY(12deg);
+        background : #08989c;
+    }
+    &:hover ${Description},&:hover ${Title}{
+        color:black;
+    }
+    &:hover ${Tag}{
+        color:white;
+        background:black;
+
+    }
+`
 
 
 
